@@ -1,0 +1,90 @@
+
+@mixin flexPosition {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContainer{
+   // background: linear-gradient(to top, #da4453, #89216b);
+    .playerDetails{
+        display: flex;
+        height: auto;
+        //background-color: red;
+        .profile{
+            //background-color: green;
+            width: 40%;
+            height: 100%;
+            padding: 5px;
+        }
+        .detailContainer{
+            width: 60%;
+            //background-color: #f9fafb;
+            .header{
+                @include flexPosition;
+              width: 100%;
+              height: fit-content;
+              background-color: silver;
+              font-size: 20px;
+            }
+        }
+    }
+    .card-list{
+        width: 100%;
+    }
+}
+.card-body{
+    background-color: #dc3545;
+    padding: 0px;
+    color:white
+}
+.card-title{
+    font-size: 15px;
+    text-align: center;
+}
+.list-view{
+    width: 100vw;
+    overflow-x: auto;
+    display: flex;
+}
+.custom-list-card{
+    min-width: 30vw;
+}
+.select-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+}
+// img{
+//     background-image: url("/../assets/images/player.png");
+// }
+.card-footer-custom{
+    font-weight: 600;
+    background-color: #7217d6;
+    padding:5px;
+    color:white
+}
+.btn-grad-blue {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%)}
+.btn-grad {
+    width: 70px;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 22px;
+   border: none; 
+   height: 25px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+ }
+ .btn-grad-blue:disabled{
+    cursor: no-drop;
+    opacity: 0.3;
+}
+a:not([href]) {
+    text-decoration: underline;
+    color:blue;
+    cursor:pointer;
+}

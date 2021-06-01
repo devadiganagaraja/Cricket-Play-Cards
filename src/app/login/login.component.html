@@ -1,0 +1,34 @@
+
+
+<div class="mainContainer">
+    <div class="profileContsiner">
+<div class="profile">
+    <img src="./assets/images/homeImage.PNG"/>
+</div>
+<div class="profileTxt">Cricket Cards</div>
+    </div>
+    <div class="loginContainer">
+        <form [formGroup]="loginForm">
+<div class="inputGroup">
+    <div class="icon">
+
+    </div>
+    <input class="input" placeholder="Mobile No" formControlName="mobile" />
+
+    
+</div>
+<div class="inputGroup">
+    <div class="icon">
+
+    </div>
+    <input type="password" class="input" placeholder="Password" formControlName="password"/>
+</div>
+</form>
+    </div>
+
+
+<button (click)="login()" class="loginButon">
+    login
+</button>
+<p routerLink="/register">Register</p>
+    </div>

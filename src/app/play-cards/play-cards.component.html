@@ -1,0 +1,106 @@
+<!-- <div class="container">
+    <div class="active-card">
+        <div class="col">
+            <div class="">
+                <h2>Player: ---</h2>
+                
+                <div class="card" style="width:195px">
+                    <img class="card-img-top" src="./assets/images/player.png" alt="Card image" style="width:100%">
+                    <div class="card-body card-body-custom">
+                        <h4 class="card-title">Sachin</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="selection-div">
+                <div>player1</div>
+                <div>count 20</div>
+            </div>
+            
+        </div>
+    </div>
+</div> -->
+<div *ngIf="!cardObj.gameFinished">
+<div class="mainContainer">
+    <div class="playerDetails">
+        <div class="profile">
+<div class="flash-card">
+<div class="card-content">
+    <img [src]="imgConnection+'/players/'+cardObj.currentCard.playerId+'.png'" alt="Card image" style="width:100%; height: 180px;">
+
+</div>
+<div class="card-footer-custom">
+    <div class="">{{cardObj.currentCard.fullName}}</div>
+</div>
+</div>
+            <!-- <div class="card p10">
+                <img class="card-img-top" [src]="imgConnection+'/players/'+cardObj.currentCard.playerId+'.png'" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">{{cardObj.currentCard.fullName}}</h4>
+                </div>
+            </div> -->
+        </div>
+        <div class="detailContainer">
+            <div class="header p5">
+                <div>
+                    {{cardObj.playerInfo.displayName}}
+                </div>
+                <div>
+                    Cards: {{cardObj.cardCount}}
+                </div>
+            </div>
+            <div class="">
+                <div class="select-option">
+                    <div>Matches</div>
+                    <div>{{cardObj.currentCard.totalMatches}}</div>
+                    <div><button [disabled]="!cardObj.activePlayer" class="btn-grad btn-grad-blue" (click)="play('1')">Select</button></div>
+                </div>
+                <div class="select-option">
+                    <div>Runs</div>
+                    <div>{{cardObj.currentCard.totalRuns}}</div>
+                    <div><button [disabled]="!cardObj.activePlayer" class="btn-grad btn-grad-blue" (click)="play('2')">Select</button></div>
+                </div>
+                <div class="select-option">
+                    <div>Wickets</div>
+                    <div>{{cardObj.currentCard.totalWickets}}</div>
+                    <div><button [disabled]="!cardObj.activePlayer" class="btn-grad btn-grad-blue" (click)="play('3')">Select</button></div>
+                </div>
+                <div class="select-option">
+                    <div>Best bowling</div>
+                    <div>{{cardObj.currentCard.bestBowling}}</div>
+                    <div><button [disabled]="!cardObj.activePlayer" class="btn-grad btn-grad-blue" (click)="play('4')">Select</button></div>
+                </div>
+                <div class="select-option">
+                    <div>Highest score</div>
+                    <div>{{cardObj.currentCard.highestScore}}</div>
+                    <div><button [disabled]="!cardObj.activePlayer" class="btn-grad btn-grad-blue" (click)="play('5')">Select</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-list list-view">
+        <div *ngFor="let palyer of cardObj.nextCards" class="card custom-list-card m10">
+            <img class="card-img-top" [src]="imgConnection+'/players/'+palyer.playerId+'.png'" onError="this.src='assets/images/player.png'" alt="Card image" style="width:100%; height:135px">
+            <div class="card-body">
+                <h4 class="card-title">{{palyer.fullName}}</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="p10">
+    <h4>
+        {{cardObj.lastResultMessage}}
+    </h4>
+    <p>
+        {{cardObj.lastResultDescription}}
+    </p>
+</div>
+</div>
+<div *ngIf="cardObj.gameFinished" class="p10">
+<h4>
+    Game Over!!!
+</h4>
+<a (click)="goHome()">Home</a>
+</div>

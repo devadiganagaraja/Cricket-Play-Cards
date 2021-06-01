@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.p10{
+    padding: 10px !important
+}
+.p5{
+    padding: 5px !important 
+}
+.m10{
+    margin:10px !important;
+}
+.w10{
+    width:10% !important
+}
+.w20{
+    width:20% !important
+}
+.w35{
+    width:35% !important
+}
+.word-brk-all{
+    word-break: break-all;
+}
+.text-center{
+    text-align: center;
+}
+
+.custom-btn{
+    width: 70px;
+    background-color: #43e843;
+    border-radius: 16px;
+    height: 26px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border: none;
+}
+.custom-btn:disabled{
+    background-color:#80808045;
+    cursor: no-drop;
+}

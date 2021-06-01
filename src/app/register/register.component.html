@@ -1,0 +1,62 @@
+<!-- <h4>Register</h4>
+
+<div class="login-container">
+    <form [formGroup]="registerForm">
+        <div>
+            <input type="text" formControlName="userName">
+        </div>
+    <div>
+        <input type="text" formControlName="mobile">
+    </div>
+    <div>
+        <input type="password" formControlName="password">
+    </div>
+    </form>
+    <button (click)="register()">
+        Register
+    </button>
+        </div> -->
+
+
+        
+
+<div class="mainContainer">
+    <div class="profileContsiner">
+<div class="profile">
+    <img src="./assets/images/homeImage.PNG"/>
+</div>
+<div class="profileTxt">Cricket Cards</div>
+    </div>
+    <div class="loginContainer">
+        <form [formGroup]="registerForm">
+            <div class="inputGroup">
+                <div class="icon">
+            
+                </div>
+                <input class="input" placeholder="User Name" formControlName="userName" />
+            
+                
+            </div>
+<div class="inputGroup">
+    <div class="icon">
+
+    </div>
+    <input class="input" placeholder="Mobile No" formControlName="mobile" />
+
+    
+</div>
+<div class="inputGroup">
+    <div class="icon">
+
+    </div>
+    <input type="password" class="input" placeholder="Password" formControlName="password"/>
+</div>
+</form>
+    </div>
+
+
+<button (click)="register()" class="loginButon">
+    Register
+</button>
+<p routerLink="/login">Login</p>
+    </div>
